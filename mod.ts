@@ -1,5 +1,6 @@
 export const isEmpty = (str: string): boolean => {
   /** 
+   * @kind function
    * Check if string is empty.
    * 
    * @param {string} str - String to check.
@@ -16,6 +17,7 @@ interface isLengthOptions {
 
 export const isLength = (str: string, options: isLengthOptions): boolean => {
     /**
+     * @kind function
      * Check if string is of a certain length (max and/or min).
      * 
      * @param {string} str - String to check.
@@ -38,6 +40,7 @@ export const isLength = (str: string, options: isLengthOptions): boolean => {
 
 export const isEmail = (str: string): boolean => {
     /**
+     * @kind function
      * Check if string is an email.
      * 
      * @param {string} str - String to check.
