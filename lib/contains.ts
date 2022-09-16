@@ -32,6 +32,6 @@ export function contains(str: string, seed: string | number, options?: Options):
       return numOccrs >= minOccurences;
     }
   }
-
+  
   return str.indexOf(seed.toString()) !== -1;
 }
