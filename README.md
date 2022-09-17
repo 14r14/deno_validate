@@ -2,6 +2,8 @@
 
 ### A simple validation library for Deno
 
+### Individual Usages can be found @ (deno.land page)[https://deno.land/x/deno_validate@v0.1.0/mod.ts]
+
 ## Usage
 
 ```ts
