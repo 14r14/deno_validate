@@ -16,7 +16,7 @@ isEmail("test1@test.com"); // true
 ## API
 
 | Function                   | Description                                                                                                            |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `isEmail(str)`             | Checks if the string is an email. `str` the string to check.                                                           |
 | `isEmpty(str)`             | Checks if the string is empty. `str` the string to check.                                                              |
 | `isLength(str [,options])` | Checks if the string's length falls in a range. `str` string to check. `options` defaults to `{min: 0, max:undefined}` |
