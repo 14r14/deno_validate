@@ -1,6 +1,6 @@
 export function equals(
   str: string | number,
-  comparison: string | number
+  comparison: string | number,
 ): boolean {
   /**
    * Check if string or number matches comparison.

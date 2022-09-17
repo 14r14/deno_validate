@@ -10,7 +10,10 @@ Deno.test("contains test", () => {
   assertEquals(false, contains("th1s is a t3st", 1, { minOccurrences: 2 }));
   assertEquals(
     false,
-    contains("Hello how are thee", "h", { ignoreCase: true, minOccurrences: 4 })
+    contains("Hello how are thee", "h", {
+      ignoreCase: true,
+      minOccurrences: 4,
+    }),
   );
   assertEquals(false, contains("hello", "H"));
   assertEquals(true, contains("hello", "H", { ignoreCase: true }));

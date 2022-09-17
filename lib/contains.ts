@@ -6,7 +6,7 @@ interface Options {
 export function contains(
   str: string,
   seed: string | number,
-  options?: Options
+  options?: Options,
 ): boolean {
   /**
    * Check if a string contains a seed(substring).
@@ -22,7 +22,8 @@ export function contains(
   const { ignoreCase = false, minOccurrences = 1 } = options || {};
 
   if (ignoreCase) {
-    return str.toLowerCase().split(seed.toString().toLowerCase()).length > minOccurrences;
+    return str.toLowerCase().split(seed.toString().toLowerCase()).length >
+      minOccurrences;
   }
 
   return str.split(seed.toString()).length > minOccurrences;
