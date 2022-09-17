@@ -1,9 +1,13 @@
 interface Options {
   ignoreCase?: boolean;
-  minOccurences?: number;
+  minOccurrences?: number;
 }
 
-export function contains(str: string, seed: string | number, options?: Options): boolean {
+export function contains(
+  str: string,
+  seed: string | number,
+  options?: Options
+): boolean {
   /**
    * Check if a string contains a seed(substring).
    *
@@ -15,23 +19,11 @@ export function contains(str: string, seed: string | number, options?: Options):
    *
    * @returns {boolean} - True if string contains seed, false otherwise.
    */
-  let ignoreCase = false;
-  let minOccurences = 1;
-  if (typeof options === "object") {
-    ignoreCase = options.ignoreCase || false;
-    minOccurences = options.minOccurences || 1;
-  }
+  const { ignoreCase = false, minOccurrences = 1 } = options || {};
+
   if (ignoreCase) {
-    str = str.toLowerCase();
-    seed = seed.toString().toLowerCase();
-    if (str.indexOf(seed) === -1) {
-      return false;
-    }
-    if (minOccurences > 1) {
-      const numOccrs = (str.match("/" + seed + "/g") || []).length;
-      return numOccrs >= minOccurences;
-    }
+    return str.toLowerCase().split(seed.toString().toLowerCase()).length > minOccurrences;
   }
-  
-  return str.indexOf(seed.toString()) !== -1;
+
+  return str.split(seed.toString()).length > minOccurrences;
 }
