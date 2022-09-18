@@ -13,3 +13,4 @@ export { isBase32 } from "./lib/isBase32.ts";
 export { isBase58 } from "./lib/isBase58.ts";
 export { isBase64 } from "./lib/isBase64.ts";
 export { isAlpha } from "./lib/isAlpha.ts";
+export { isAlphaNumeric } from "./lib/isAlphaNumeric.ts";

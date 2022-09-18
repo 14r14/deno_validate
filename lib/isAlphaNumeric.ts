@@ -1,13 +1,13 @@
-import { alpha } from "./alpha.ts";
+import { alphanumeric } from "./alpha.ts";
 
 interface Options {
   ignore?: string | RegExp;
 }
 
-export function isAlpha(
+export function isAlphaNumeric(
   str: string,
   locale = "en-US",
-  options?: Options,
+  options?: Options
 ): boolean {
   if (options && options.ignore) {
     if (options.ignore instanceof RegExp) {
@@ -16,19 +16,19 @@ export function isAlpha(
       str = str.replace(
         new RegExp(
           `[${options.ignore.replace(/[-[\]{}()*+?.,\\^$|#\\s]/g, "\\$&")}]`,
-          "g",
+          "g"
         ),
-        "",
+        ""
       );
     } else {
       throw new Error("ignore should be a string or a RegExp");
     }
   }
 
-  if (locale in alpha) {
-    return alpha[locale].test(str);
+  if (locale in alphanumeric) {
+    return alphanumeric[locale].test(str);
   }
   throw new Error(`Invalid locale '${locale}'`);
 }
 
-export const availableLocales = Object.keys(alpha);
+export const availableLocales = Object.keys(alphanumeric);
