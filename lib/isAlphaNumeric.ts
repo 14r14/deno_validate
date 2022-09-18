@@ -7,7 +7,7 @@ interface Options {
 export function isAlphaNumeric(
   str: string,
   locale = "en-US",
-  options?: Options
+  options?: Options,
 ): boolean {
   if (options && options.ignore) {
     if (options.ignore instanceof RegExp) {
@@ -16,9 +16,9 @@ export function isAlphaNumeric(
       str = str.replace(
         new RegExp(
           `[${options.ignore.replace(/[-[\]{}()*+?.,\\^$|#\\s]/g, "\\$&")}]`,
-          "g"
+          "g",
         ),
-        ""
+        "",
       );
     } else {
       throw new Error("ignore should be a string or a RegExp");

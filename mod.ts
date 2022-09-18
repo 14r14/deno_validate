@@ -7,6 +7,8 @@ export { isEmail } from "./lib/isEmail.ts";
 export { equals } from "./lib/equals.ts";
 export { contains } from "./lib/contains.ts";
 export { matches } from "./lib/matches.ts";
+export { isLowercase } from "./lib/isLowercase.ts";
+export { isUppercase } from "./lib/isUppercase.ts";
 
 // Utility methods
 export { isBase32 } from "./lib/isBase32.ts";
