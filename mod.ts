@@ -9,6 +9,7 @@ export { contains } from "./lib/contains.ts";
 export { matches } from "./lib/matches.ts";
 export { isLowercase } from "./lib/isLowercase.ts";
 export { isUppercase } from "./lib/isUppercase.ts";
+export { isJWT } from "./lib/isJWT.ts";
 
 // Utility methods
 export { isBase32 } from "./lib/isBase32.ts";

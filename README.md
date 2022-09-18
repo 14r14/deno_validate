@@ -31,3 +31,4 @@ isEmail("test1@test.com"); // true
 | `isAlphaNumeric(str [,locale] [,options])` | Checks if `str` contains only letters and numbers. `locale` defaults to `en-US`. `options` which can be either strings or Regex will be ignored. Example: `{ ignore: " " }` |
 | `isLowercase(str [,locale])`               | Checks if `str` is lowercase                                                                                                                                                |
 | `isUppercase(str [,locale])`               | Checks if `str` is uppercase                                                                                                                                                |
+| `isJWT(str)`                               | Checks if `str` is a valid JWT token.                                                                                                                                       |
