@@ -1,10 +1,10 @@
-import { alpha } from "./alpha.ts";
+import { alphanumeric } from "./alpha.ts";
 
 interface Options {
   ignore?: string | RegExp;
 }
 
-export function isAlpha(
+export function isAlphaNumeric(
   str: string,
   locale = "en-US",
   options?: Options,
@@ -25,10 +25,10 @@ export function isAlpha(
     }
   }
 
-  if (locale in alpha) {
-    return alpha[locale].test(str);
+  if (locale in alphanumeric) {
+    return alphanumeric[locale].test(str);
   }
   throw new Error(`Invalid locale '${locale}'`);
 }
 
-export const availableLocales = Object.keys(alpha);
+export const availableLocales = Object.keys(alphanumeric);

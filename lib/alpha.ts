@@ -1,10 +1,10 @@
 // Courtesy of validator.js : https://github.com/validatorjs/validator.js/blob/master/src/lib/alpha.js
 
-interface Alpha {
+interface AlphaAndNumeric {
   [locale: string]: RegExp;
 }
 
-export const alpha: Alpha = {
+export const alpha: AlphaAndNumeric = {
   "en-US": /^[A-Z]+$/i,
   "az-AZ": /^[A-VXYZÇƏĞİıÖŞÜ]+$/i,
   "bg-BG": /^[А-Я]+$/i,
@@ -44,7 +44,7 @@ export const alpha: Alpha = {
   "si-LK": /^[\u0D80-\u0DFF]+$/,
 };
 
-export const alphanumeric = {
+export const alphanumeric: AlphaAndNumeric = {
   "en-US": /^[0-9A-Z]+$/i,
   "az-AZ": /^[0-9A-VXYZÇƏĞİıÖŞÜ]+$/i,
   "bg-BG": /^[0-9А-Я]+$/i,
